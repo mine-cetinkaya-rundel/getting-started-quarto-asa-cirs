@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "talk.html#quarto",
+    "href": "talk.html#quarto",
+    "title": "Getting started with Quarto",
+    "section": "Quarto …",
+    "text": "Quarto …\n\nis a new, open-source, scientific, and technical publishing system\naims to make the process of creating and collaborating dramatically better\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "talk.html#quarto-1",
+    "href": "talk.html#quarto-1",
+    "title": "Getting started with Quarto",
+    "section": "Quarto …",
+    "text": "Quarto …\nunifies + extends the R Markdown ecosystem"
+  },
+  {
+    "objectID": "talk.html#quarto-2",
+    "href": "talk.html#quarto-2",
+    "title": "Getting started with Quarto",
+    "section": "Quarto …",
+    "text": "Quarto …\nunifies + extends the R Markdown ecosystem\n\nunifies for people who love R Markdown"
+  },
+  {
+    "objectID": "talk.html#quarto-3",
+    "href": "talk.html#quarto-3",
+    "title": "Getting started with Quarto",
+    "section": "Quarto …",
+    "text": "Quarto …\nunifies + extends the R Markdown ecosystem\n\nunifies for people who love R Markdown\nextends for people who don’t know R Markdown"
+  },
+  {
+    "objectID": "talk.html#quarto-unifies-extends-r-markdown",
+    "href": "talk.html#quarto-unifies-extends-r-markdown",
+    "title": "Getting started with Quarto",
+    "section": "Quarto unifies + extends R Markdown",
+    "text": "Quarto unifies + extends R Markdown\n\nConsistent implementation of attractive and handy features across outputs: tabsets, code-folding, syntax highlighting, etc.\nMore accessible defaults as well as better support for accessibility\nGuardrails, particularly helpful for new learners: YAML completion, informative syntax errors, etc.\nSupport for other languages like Python, Observable, and more via Jupyter engine for executable code chunks."
+  },
+  {
+    "objectID": "talk.html#demo",
+    "href": "talk.html#demo",
+    "title": "Getting started with Quarto",
+    "section": "Demo",
+    "text": "Demo\nIf you’d like to follow along, go to\nhttps://github.com/mine-cetinkaya-rundel/quarto-niss\nand clone the repo to get started"
+  },
+  {
+    "objectID": "talk.html#demo-1",
+    "href": "talk.html#demo-1",
+    "title": "Getting started with Quarto",
+    "section": "Demo",
+    "text": "Demo\n\nGo to https://github.com/quarto-journals/jasa\nFollow the instructions under Creating a new article\nAdd your author details and render the document\nAdd a citation and re-render"
+  },
+  {
+    "objectID": "talk.html#quarto-cli",
+    "href": "talk.html#quarto-cli",
+    "title": "Getting started with Quarto",
+    "section": "Quarto CLI…",
+    "text": "Quarto CLI…\norchestrates each step of rendering\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "talk.html#learning-more",
+    "href": "talk.html#learning-more",
+    "title": "Getting started with Quarto",
+    "section": "Learning more",
+    "text": "Learning more\nhttps://quarto.org"
+  },
+  {
+    "objectID": "talk.html#look-forward-to",
+    "href": "talk.html#look-forward-to",
+    "title": "Getting started with Quarto",
+    "section": "Look forward to",
+    "text": "Look forward to\nQuarto 1.10! https://quarto.org/docs/download/prerelease.html"
+  },
+  {
+    "objectID": "talk.html#follow-up-with",
+    "href": "talk.html#follow-up-with",
+    "title": "Getting started with Quarto",
+    "section": "Follow up with…",
+    "text": "Follow up with…\nthe Posit Open Source Blog: https://opensource.posit.co/blog/?q=source%3Aquarto"
+  },
+  {
+    "objectID": "talk.html#thank-you",
+    "href": "talk.html#thank-you",
+    "title": "Getting started with Quarto",
+    "section": "Thank you!",
+    "text": "Thank you!\n🦋 https://bsky.app/profile/minecr.bsky.social"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "For this analysis we’ll use the penguins dataset from the palmerpenguins package.\n\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(gt)"
+  },
+  {
+    "objectID": "index.html#data",
+    "href": "index.html#data",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "For this analysis we’ll use the penguins dataset from the palmerpenguins package.\n\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(gt)"
+  },
+  {
+    "objectID": "index.html#species",
+    "href": "index.html#species",
+    "title": "Hello, Penguins!",
+    "section": "Species",
+    "text": "Species\nThe figure below is a bar plot of species of penguins.\n\nggplot(\n  penguins,\n  aes(\n    x = bill_length_mm,\n    y = bill_depth_mm,\n    color = species,\n    shape = species\n  )\n) +\n  geom_point() +\n  theme_minimal() +\n  scale_color_colorblind() +\n  labs(x = \"Bill length (mm)\", y = \"Bill depth (mm)\")\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "index.html#penguins",
+    "href": "index.html#penguins",
+    "title": "Hello, Penguins!",
+    "section": "Penguins",
+    "text": "Penguins\nThe table below shows the first 10 penguins from the dataset.\n\npenguins |&gt;\n  slice_head(n = 10) |&gt;\n  select(species, island, bill_length_mm, bill_depth_mm) |&gt;\n  gt()\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n\n\nAdelie\nTorgersen\n39.5\n17.4\n\n\nAdelie\nTorgersen\n40.3\n18.0\n\n\nAdelie\nTorgersen\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n\n\nAdelie\nTorgersen\n39.3\n20.6\n\n\nAdelie\nTorgersen\n38.9\n17.8\n\n\nAdelie\nTorgersen\n39.2\n19.6\n\n\nAdelie\nTorgersen\n34.1\n18.1\n\n\nAdelie\nTorgersen\n42.0\n20.2"
+  },
+  {
+    "objectID": "my-paper/my-paper.html",
+    "href": "my-paper/my-paper.html",
+    "title": "My awesome paper on penguins",
+    "section": "",
+    "text": "Body of paper. Margins in this document are roughly 0.75 inches all around, letter size paper.\n\n\n\n\n\n\nFigure 1: Consistency comparison in fitting surrogate model in the tidal power example.\n\n\n\n\n\n\nTable 1: D-optimality values for design X under five different scenarios.\n\n\n\n\n\none\ntwo\nthree\nfour\nfive\n\n\n\n\n1.23\n3.45\n5.00\n1.21\n3.41\n\n\n1.23\n3.45\n5.00\n1.21\n3.42\n\n\n1.23\n3.45\n5.00\n1.21\n3.43\n\n\n\n\n\n\n\nNote that figures and tables (such as Figure 1 and Table 1) should appear in the paper, not at the end or in separate files.\nIn document front matter, you may set the key blinded under a journal key to hide the authors and acknowledgements, producing the required anonymized version.(A Fresh Look at Introductory Data Science, n.d.)\nRemember that in the anonymized version, you should not identify authors indirectly in the text. That is, don’t say “In Smith et. al. (2009) we showed that …”. Instead, say “Smith et. al. (2009) showed that …”.\nThese points are only intended to remind you of some requirements. Please refer to the instructions for authors at http://amstat.tandfonline.com/action/authorSubmission?journalCode=uasa20&page=instructions#.VFkk7fnF_0c\nFor more about ASA style, please see https://files.taylorandfrancis.com/asa-style-guide.pdf.\nIf you have supplementary material (e.g., software, data, technical proofs), identify them in the section below. In early stages of the submission process, you may be unsure what to include as supplementary material. Don’t worry—this is something that can be worked out at later stages."
+  },
+  {
+    "objectID": "my-paper/my-paper.html#sec-intro",
+    "href": "my-paper/my-paper.html#sec-intro",
+    "title": "My awesome paper on penguins",
+    "section": "",
+    "text": "Body of paper. Margins in this document are roughly 0.75 inches all around, letter size paper.\n\n\n\n\n\n\nFigure 1: Consistency comparison in fitting surrogate model in the tidal power example.\n\n\n\n\n\n\nTable 1: D-optimality values for design X under five different scenarios.\n\n\n\n\n\none\ntwo\nthree\nfour\nfive\n\n\n\n\n1.23\n3.45\n5.00\n1.21\n3.41\n\n\n1.23\n3.45\n5.00\n1.21\n3.42\n\n\n1.23\n3.45\n5.00\n1.21\n3.43\n\n\n\n\n\n\n\nNote that figures and tables (such as Figure 1 and Table 1) should appear in the paper, not at the end or in separate files.\nIn document front matter, you may set the key blinded under a journal key to hide the authors and acknowledgements, producing the required anonymized version.(A Fresh Look at Introductory Data Science, n.d.)\nRemember that in the anonymized version, you should not identify authors indirectly in the text. That is, don’t say “In Smith et. al. (2009) we showed that …”. Instead, say “Smith et. al. (2009) showed that …”.\nThese points are only intended to remind you of some requirements. Please refer to the instructions for authors at http://amstat.tandfonline.com/action/authorSubmission?journalCode=uasa20&page=instructions#.VFkk7fnF_0c\nFor more about ASA style, please see https://files.taylorandfrancis.com/asa-style-guide.pdf.\nIf you have supplementary material (e.g., software, data, technical proofs), identify them in the section below. In early stages of the submission process, you may be unsure what to include as supplementary material. Don’t worry—this is something that can be worked out at later stages."
+  },
+  {
+    "objectID": "my-paper/my-paper.html#sec-meth",
+    "href": "my-paper/my-paper.html#sec-meth",
+    "title": "My awesome paper on penguins",
+    "section": "Methods",
+    "text": "Methods\nDon’t take any of these section titles seriously. They’re just for illustration."
+  },
+  {
+    "objectID": "my-paper/my-paper.html#sec-verify",
+    "href": "my-paper/my-paper.html#sec-verify",
+    "title": "My awesome paper on penguins",
+    "section": "Verifications",
+    "text": "Verifications\nThis section will be just long enough to illustrate what a full page of text looks like, for margins and spacing.\n\nGelman and Vehtari (2021) offer some guidance about key ideas about statistical ideas. On an unrelated note, spreadsheets are important to use correctly (Broman and Woo 2018). Log-linear models are an attractive way to model categorical data (Bishop et al. 1975).\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. With this spacing we have 25 lines per page. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\n\n\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.\nThe quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog."
+  },
+  {
+    "objectID": "my-paper/my-paper.html#sec-conc",
+    "href": "my-paper/my-paper.html#sec-conc",
+    "title": "My awesome paper on penguins",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "my-paper/my-paper.html#disclosure-statement",
+    "href": "my-paper/my-paper.html#disclosure-statement",
+    "title": "My awesome paper on penguins",
+    "section": "Disclosure statement",
+    "text": "Disclosure statement\nThe authors have the following conflicts of interest to declare (or replace with a statement that no conflicts of interest exist)."
+  },
+  {
+    "objectID": "my-paper/my-paper.html#data-availability-statement",
+    "href": "my-paper/my-paper.html#data-availability-statement",
+    "title": "My awesome paper on penguins",
+    "section": "Data Availability Statement",
+    "text": "Data Availability Statement\nDeidentified data have been made available at the following URL: XX."
+  },
+  {
+    "objectID": "my-paper/my-paper.html#supplementary-material",
+    "href": "my-paper/my-paper.html#supplementary-material",
+    "title": "My awesome paper on penguins",
+    "section": "Supplementary Material",
+    "text": "Supplementary Material\n\nTitle:\n\nBrief description. (file type)\n\nR-package for MYNEW routine:\n\nR-package MYNEW containing code to perform the diagnostic methods described in the article. The package also contains all datasets used as examples in the article. (GNU zipped tar file)\n\nHIV data set:\n\nData set used in the illustration of MYNEW method in Section 3 (.txt file)."
+  },
+  {
+    "objectID": "my-paper/my-paper.html#bibtex",
+    "href": "my-paper/my-paper.html#bibtex",
+    "title": "My awesome paper on penguins",
+    "section": "BibTeX",
+    "text": "BibTeX\nWe encourage you to use BibTeX. If you have, please feel free to use the package natbib with any bibliography style you’re comfortable with. The .bst file agsm has been included here for your convenience."
+  }
+]
